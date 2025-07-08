@@ -81,7 +81,7 @@ export default function Home() {
             className={`sprite ${isJumping ? "jump" : ""}`}
             onClick={handleJump}
           />
-          <p className="text-lg text-black-300 dark:text-gray-400 mt-4 font-serif">
+          <p className="text-lg text-black-300 dark:text-gray-400 mt-160 font-serif">
             Click the sprite to make it jump!
           </p>
 
