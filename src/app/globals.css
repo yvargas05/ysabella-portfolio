@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-greatvibes: 'Great Vibes', cursive;
+
+   --color-text-primary: #444737;    /* dark olive-green */
+  --color-accent: #d8af9d;          /* muted peach */
+  --color-text-secondary: #997b66;  /* soft brown */
+  --color-bg: #f1dca7;              /* light parchment */
+  --color-hover: #9b9b7a;           /* subdued sage */
+  --color-link: #7b5237;            /* warm terracotta */
+  --color-project-hover: #ffcb69;   /* golden yellow */
+  --color-blurb: #f1dca7;           /* parchment paper */
+
+ 
+  --background: var(--color-bg);
+  --foreground: var(--color-text-primary);
 }
 
 @theme inline {
@@ -14,13 +27,214 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #2F1E1E;           /* Dark warm brown */
+    --foreground: #E2B4BC;           /* Soft rose */
+    --color-text-primary: #E2B4BC;   /* Headings */
+    --color-text-secondary: #A07A6A; /* Secondary text */
+    --color-accent: #D89DB3;         /* Buttons, links */
+    --color-hover: #C28595;      
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cormorant);
+  background: linear-gradient(to bottom right, #5d774c, #F9F5F1, #7b9b7b);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-background {
+  background-color: #F5EAD6; /* old parchment color */
+  border: 2px solid #D7C9A7; /* paper-like border */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  max-width: 600px;
+  margin: 1rem auto;
+
+  /* subtle paper texture */
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+    radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-position: 0 0, 5px 5px;
+  background-size: 10px 10px, 10px 10px;
+
+  /* fade-in animation */
+  animation: fadeIn 2s ease-out forwards;
+
+}
+
+
+
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+
+.font-cursive {
+  font-family: var(--font-greatvibes);
+}
+
+.project-hover:hover {
+  background-color: var(--color-project-hover);
+  cursor: pointer; /* optional: show pointer on hover */
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  border-radius: 9999px; /* rounded-full */
+  padding: 0.5rem 1.25rem; /* py-2 px-5 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hover);
+  opacity: 0.8;
+}
+
+/* Secondary button (bordered) */
+.btn-secondary {
+  border: 1px solid var(--color-text-secondary);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-100px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-float-pulse {
+  animation: float 6s ease-in-out infinite, pulse 6s ease-in-out infinite;
+}
+
+@keyframes moveBlob1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(100px, -300px); }
+  50% { transform: translate(-150px, 250px); }
+  75% { transform: translate(300px, 150px); }
+}
+
+@keyframes moveBlob2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-250px, 200px); }
+  50% { transform: translate(350px, -150px); }
+  75% { transform: translate(-200px, -250px); }
+}
+
+@keyframes moveBlob3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(300px, 150px); }
+  50% { transform: translate(-300px, -300px); }
+  75% { transform: translate(150px, 250px); }
+}
+
+@keyframes moveBlob4 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-200px, -200px); }
+  50% { transform: translate(250px, 300px); }
+  75% { transform: translate(-250px, 100px); }
+}
+
+@keyframes moveBlob5 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(150px, 250px); }
+  50% { transform: translate(-200px, -150px); }
+  75% { transform: translate(200px, -200px); }
+}
+.sprite {
+  position: absolute;  /* or fixed */
+  top: 200px;
+  left: 800px;
+
+  width: 64px;                /* Width of a single frame */
+  height: 50px;               /* Height of the frame */
+  background-image: url('/walk.png');
+  background-repeat: no-repeat;
+  background-size: 576px 50px;  /* Full sheet size */
+  animation: spriteWalk 1s steps(9) infinite;
+  transform: scale(9);        /* Scale up for visibility */
+  transform-origin: top left;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+@keyframes spriteWalk {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -575px 0;
+  }
+}
+
+@keyframes spriteJump {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -190px 0; /* Replace with full width */
+  }
+}
+
+.sprite.jump {
+  background-image: url('/emote.png');
+  background-repeat: no-repeat;
+  background-size: 190px 50px;  /* Replace with full width */
+  animation: spriteJump 0.8s steps(3) forwards;
 }
