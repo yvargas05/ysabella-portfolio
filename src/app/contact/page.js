@@ -4,10 +4,14 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] px-2">
       <h1 className="text-8xl font-bold mb-6 mt-6 font-cursive">Contact Me</h1>
-      <p className="mb-8 text-xl text-center max-w-xl font-serif" >
-        Want to connect? I'd love to hear from you! Fill out the form below or email me directly at{" "}
-        <a href="ysabellavargas05@gmail.com" className="text-[var(--color-link)] underline"> ysabellavargas05@gmail.com</a>
+      
+      <p className="mb-8 text-xl text-center max-w-xl font-serif">
+        Want to connect? I&apos;d love to hear from you! Fill out the form below or email me directly at{" "}
+        <a href="mailto:ysabellavargas05@gmail.com" className="text-[var(--color-link)] underline">
+          ysabellavargas05@gmail.com
+        </a>
       </p>
+      
       <form className="flex flex-col gap-4 w-full max-w-md bg-white/80 p-8 rounded-xl shadow">
         <input
           type="text"
@@ -40,34 +44,36 @@ export default function Contact() {
         </button>
       </form>
 
-      <div className=" text-center font-serif">
-  <h2 className="mt-4 text-xl font-bold">Find Me Online:</h2>
-  <p className="text-lg">
-    <a
-      href="https://github.com/yvargas05"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[var(--color-link)] underline hover:text-[var(--color-hover)]"
-    >
-      GitHub
-    </a>
-  </p>
-  <p>
-    <a
-      href="https://linkedin.com/in/ysabellavargas05"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[var(--color-link)] underline hover:text-[var(--color-hover)]"
-    >
-      LinkedIn
-    </a>
-  </p>
-</div>
-      <Link href="/" className="text-xl mt-8 text-[var(--color-link)] underline hover:text-[var(--color-hover)]">
+      <div className="text-center font-serif mt-8">
+        <h2 className="text-xl font-bold">Find Me Online:</h2>
+        <p className="text-lg">
+          <a
+            href="https://github.com/yvargas05"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-link)] underline hover:text-[var(--color-hover)]"
+          >
+            GitHub
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://linkedin.com/in/ysabellavargas05"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-link)] underline hover:text-[var(--color-hover)]"
+          >
+            LinkedIn
+          </a>
+        </p>
+      </div>
+
+      <Link
+        href="/"
+        className="text-xl mt-8 text-[var(--color-link)] underline hover:text-[var(--color-hover)]"
+      >
         ← Back to Home
       </Link>
-      
     </div>
-    
   );
 }
