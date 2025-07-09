@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <div className="h-screen flex justify-center items-start pt-20 pb-20 text-[var(--foreground)]">
+    <div className="h-screen flex justify-center items-start pt-20 pb-20 text-[var(--foreground)] animate-fadeIn">
 
       {/* Main content */}
       <main className="relative z-10 max-w-4xl w-full flex flex-col items-center justify-center p-2">

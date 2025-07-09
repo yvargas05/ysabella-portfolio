@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] font-serif">
+    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] font-serif animate-fadeIn">
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {/* Title and Download */}
         <div className="flex flex-col items-center gap-8">

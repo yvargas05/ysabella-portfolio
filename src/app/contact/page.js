@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] px-2">
+    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] px-2 animate-fadeIn">
       <h1 className="text-8xl font-bold mb-6 mt-6 font-cursive">Contact Me</h1>
       
       <p className="mb-8 text-xl text-center max-w-xl font-serif">

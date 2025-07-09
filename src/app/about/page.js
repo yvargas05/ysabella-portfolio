@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center text-[var(--foreground)] px-4 animate-fadeIn">
       <h1 className="text-8xl font-bold mb-8 font-cursive">About Me</h1>
       <div className="flex flex-col md:flex-row items-center gap-8 bg-white/80 p-8 rounded-xl shadow max-w-3xl">
         <div className="w-80 flex-shrink-0 flex justify-center">
